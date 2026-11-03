@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 내장 응답 서버와 AI 설문 초안 생성(외부 LLM 호출)에 필요 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="snap_poll_admin"
         android:name="${applicationName}"

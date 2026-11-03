@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../models/poll.dart';
 import '../providers/poll_provider.dart';
 import 'create_edit_poll_page.dart';
+import 'llm_settings_page.dart';
 import 'publish_page.dart';
 import 'report_page.dart';
 
@@ -19,6 +20,13 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Snap Poll - 관리자'),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.auto_awesome_outlined),
+            tooltip: 'AI 설정',
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const LlmSettingsPage()),
+            ),
+          ),
           IconButton(
             icon: const Icon(Icons.bar_chart),
             tooltip: '보고서',
